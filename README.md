@@ -6,7 +6,29 @@ To install this on UserLAnd inside a linux container, first you have to download
 
 After installing UserLAnd, make a fresh debian container. This should be easy, as it prompts you for a username and password upon clicking the Debian icon.
 
-Run `./install` inside the container
+Get the install script from this git directory somehow and run it via `./install.sh` inside the container.
+
+This could be done in a few ways:
+
+
+```
+bash <(curl -s placeholder)
+```
+
+```
+wget placeholder
+chmod +x install.sh
+./install.sh`
+```
+
+or
+
+```
+git clone https://github.com/MatthewCroughan/userland-mqtt-stack.git
+cd userland-mqtt-stack
+./install.sh
+```
+
 
 # Usage
 

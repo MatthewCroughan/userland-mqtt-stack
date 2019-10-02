@@ -55,7 +55,7 @@ install_stack() {
 install_scripts() {
   startstack="mosquitto &
   node-red &
-  influxdb &
+  influxd &
   grafana-server --homepath "/usr/share/grafana" &"
   echo "$startstack" > ~/startstack.sh
   chmod +x ~/startstack.sh

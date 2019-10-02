@@ -60,7 +60,7 @@ install_scripts() {
   echo "$startstack" > ~/startstack.sh
   chmod +x ~/startstack.sh
   killstack="killall -9 mosquitto node-red influxdb grafana"
-  echo "$killstack" > ~/startstack.sh
+  echo "$killstack" > ~/killstack.sh
   chmod +x ~/killstack.sh
 }
 
@@ -85,4 +85,4 @@ spinner $!
 (printf '\e[1;32m%-6s\e[m\n' "[ Installing cronjob so services will start on boot ]" && install_crontab >> ~/mqtt-stack.log) &
 spinner $!
 
-print_nuke
+print-nuke

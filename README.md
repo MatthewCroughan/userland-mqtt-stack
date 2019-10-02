@@ -10,19 +10,19 @@ Get the install script from this git directory somehow and run it via `./install
 
 This could be done in a few ways:
 
+Via curl
+```
+bash <(curl -s https://raw.githubusercontent.com/MatthewCroughan/userland-mqtt-stack/master/install.sh)
+```
 
+Via wget and running directly
 ```
-bash <(curl -s placeholder)
-```
-
-```
-wget placeholder
+wget https://raw.githubusercontent.com/MatthewCroughan/userland-mqtt-stack/master/install.sh
 chmod +x install.sh
 ./install.sh`
 ```
 
-or
-
+Cloning the repository and running
 ```
 git clone https://github.com/MatthewCroughan/userland-mqtt-stack.git
 cd userland-mqtt-stack

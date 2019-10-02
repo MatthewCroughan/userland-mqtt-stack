@@ -15,7 +15,7 @@ This could be done in a few ways:
 
 Via curl (first `sudo apt install curl -y`)
 ```
-bash <(curl -s https://raw.githubusercontent.com/MatthewCroughan/userland-mqtt-stack/master/install.sh)
+curl -s -L https://raw.githubusercontent.com/MatthewCroughan/userland-mqtt-stack/master/install.sh | bash
 ```
 
 Via wget and running directly (first `sudo apt install wget -y`)

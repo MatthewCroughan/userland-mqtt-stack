@@ -56,10 +56,10 @@ install_scripts() {
   startstack="mosquitto &
   node-red &
   influxdb &
-  grafana &"
+  grafana-server --homepath "/usr/share/grafana" &"
   echo "$startstack" > ~/startstack.sh
   chmod +x ~/startstack.sh
-  killstack="killall -9 mosquitto node influxdb grafana"
+  killstack="killall -9 mosquitto node influxdb grafana-server"
   echo "$killstack" > ~/killstack.sh
   chmod +x ~/killstack.sh
 }

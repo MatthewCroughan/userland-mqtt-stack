@@ -59,7 +59,7 @@ install_scripts() {
   grafana &"
   echo "$startstack" > ~/startstack.sh
   chmod +x ~/startstack.sh
-  killstack="killall -9 mosquitto node-red influxdb grafana"
+  killstack="killall -9 mosquitto node influxdb grafana"
   echo "$killstack" > ~/killstack.sh
   chmod +x ~/killstack.sh
 }

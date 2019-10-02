@@ -73,16 +73,16 @@ cleanup() {
     sudo apt-get autoremove -y
 }
 
-(printf '\e[1;32m%-6s\e[m\n' "[ Installing requirements to install the stack ]" && install_preliminary >> ~/mqtt-stack.log)
-#spinner $!
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing requirements to install the stack ]" && install_preliminary >> ~/mqtt-stack.log) &
+spinner $!
 
-(printf '\e[1;32m%-6s\e[m\n' "[ Installing the stack ]" && install_stack >> ~/mqtt-stack.log)
-#spinner $!
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing the stack ]" && install_stack >> ~/mqtt-stack.log) &
+spinner $!
 
-(printf '\e[1;32m%-6s\e[m\n' "[ Installing management scripts in ~/ ]" && install_scripts >> ~/mqtt-stack.log)
-#spinner $!
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing management scripts in ~/ ]" && install_scripts >> ~/mqtt-stack.log) &
+spinner $!
 
-(printf '\e[1;32m%-6s\e[m\n' "[ Installing cronjob so services will start on boot ]" && install_crontab >> ~/mqtt-stack.log )
-#spinner $!
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing cronjob so services will start on boot ]" && install_crontab >> ~/mqtt-stack.log) &
+spinner $!
 
 print_nuke

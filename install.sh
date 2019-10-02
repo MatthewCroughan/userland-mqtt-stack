@@ -60,8 +60,8 @@ install_scripts() {
   echo "$startstack" > ~/startstack.sh
   chmod +x ~/startstack.sh
   killstack="killall -9 mosquitto node-red influxdb grafana"
-  echo "$startstack" > ~/startstack.sh
-  chmod +x ~/startstack.sh
+  echo "$killstack" > ~/startstack.sh
+  chmod +x ~/killstack.sh
 }
 
 install_crontab() {

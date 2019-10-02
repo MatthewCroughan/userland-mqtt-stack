@@ -1,12 +1,15 @@
-# Install
-
 ![UserLAnd](https://userland.tech/static/phone-feature-horizontal-be4009ad7e0ee7ab5c3607b4f9d92977.gif)
 
-To install this on UserLAnd inside a linux container, first you have to download UserLAnd from [F-droid](https://f-droid.org/en/) or the [google play store.](https://play.google.com/store/apps/details?id=tech.ula)
+# Install
 
-After installing UserLAnd, make a fresh debian container. This should be easy, as it prompts you for a username and password upon clicking the Debian icon.
+To install this stack on UserLAnd inside a linux container, first you have to download UserLAnd from [F-droid](https://f-droid.org/en/) or the [google play store.](https://play.google.com/store/apps/details?id=tech.ula)
 
-Get the install script from this git directory somehow and run it via `./install.sh` inside the container.
+After installing UserLAnd on your device, make a fresh Debian container. 
+
+The IP Address of your phone can be used via UserLAnd on port 2022. You can find out your phone's ip in the Android settings under "About Phone"
+`ssh username@ip.address.here -p 2022`
+
+Now your container is set up, get the install script from this git directory somehow and run it inside the container.
 
 This could be done in a few ways:
 
@@ -36,7 +39,7 @@ After installing, the stack will start up with the container via crontab's `@reb
 
 You can simply start and stop the container by hold-pressing the icon/button for your container in UserLAnd.
 
-In the home directory of your user there exists `~/killstack.sh` and `startstack.sh` should the stack ever fail you for some reason. Though this is un-necessary otherwise. 
+`~/killstack.sh` and `~/startstack.sh` are scripts that do what they say on the tin, should the stack ever fail you for some reason.
 
 # Notes
 

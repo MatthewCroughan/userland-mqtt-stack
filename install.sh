@@ -5,6 +5,23 @@ fi
 
 sudo apt install procps ncurses-term -y
 
+print-nuke() {
+echo "ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgX19fXyAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgIF9fLC1+fi9+ICAgIGAtLS0uICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICBfL18sLS0tKCAgICAgICwgICAgKSAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgIF9fIC8gICAgICAgIDwgICAgLyAgICkgIFxfX18gICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgPT09PS0tLS0tLS0tLS0tLS0tLS0tLT09PTs7Oz09ICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgIFwvICB+In4ifiJ+In4iflx+In4pfiIsMS8gICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgIChfICggICBcICAoICAgICA+ICAgIFwpICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICBcXyggXyA8ICAgICAgICAgPl8+JyAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICB+IGAtaScgOjo+fC0tIiAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgSTt8LnwufCAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICA8fGk6OnxpfD4gICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgfFs6OnwufCAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgIHx8OiB8ICAgICAgICAgICAgICAgICAgICAgICAK
+ICAgICAgICAgICAgICAgICAgICAgICAgICAgQllFLUJZRQo=" | base64 -d
+}
+
 spinner()
 {
     local pid=$1
@@ -59,12 +76,13 @@ cleanup() {
 (printf '\e[1;32m%-6s\e[m\n' "[ Installing requirements to install the stack ]" && install_preliminary >> ~/mqtt-stack.log)
 #spinner $!
 
-(printf '\e[1;32m%-6s\e[m\n' "[ Installing the stack ]" && install_stack >> ~/mqtt-stack.log) &
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing the stack ]" && install_stack >> ~/mqtt-stack.log)
 #spinner $!
 
-(printf '\e[1;32m%-6s\e[m\n' "[ Installing management scripts in ~/ ]" && install_scripts >> ~/mqtt-stack.log) &
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing management scripts in ~/ ]" && install_scripts >> ~/mqtt-stack.log)
 #spinner $!
 
-(printf '\e[1;32m%-6s\e[m\n' "[ Installing cronjob so services will start on boot ]" && install_crontab >> ~/mqtt-stack.log ) &
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing cronjob so services will start on boot ]" && install_crontab >> ~/mqtt-stack.log )
 #spinner $!
 
+print_nuke

@@ -17,7 +17,7 @@ spinner()
         sleep $delay
         printf "\b\b\b\b\b\b"
     done
-    printf '\e[1;32m%-6s\e[m' " Done!"
+    printf '\e[1;32m%-6s\e[m\n' " Done!"
     printf "    \b\b\b\b"
 }
 
@@ -56,15 +56,15 @@ cleanup() {
     sudo apt-get autoremove -y
 }
 
-(printf '\e[1;32m%-6s\e[m' "[ Installing requirements to install the stack ]" && install_preliminary >> ~/mqtt-stack.log)
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing requirements to install the stack ]" && install_preliminary >> ~/mqtt-stack.log)
 #spinner $!
 
-(printf '\e[1;32m%-6s\e[m' "[ Installing the stack ]" && install_stack >> ~/mqtt-stack.log) &
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing the stack ]" && install_stack >> ~/mqtt-stack.log) &
 #spinner $!
 
-(printf '\e[1;32m%-6s\e[m' "[ Installing management scripts in ~/ ]" && install_scripts >> ~/mqtt-stack.log) &
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing management scripts in ~/ ]" && install_scripts >> ~/mqtt-stack.log) &
 #spinner $!
 
-(printf '\e[1;32m%-6s\e[m' "[ Installing cronjob so services will start on boot ]" && install_crontab >> ~/mqtt-stack.log ) &
+(printf '\e[1;32m%-6s\e[m\n' "[ Installing cronjob so services will start on boot ]" && install_crontab >> ~/mqtt-stack.log ) &
 #spinner $!
 

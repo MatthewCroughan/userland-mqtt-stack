@@ -1,3 +1,8 @@
+if [[ $EUID -eq 0 ]]; then
+  echo "This script must NOT be run as root" 1>&2
+  exit 1
+fi
+
 sudo apt-get update
 sudo apt-get install htop psmisc nano vim wget cron software-properties-common apt-transport-https gnupg -y
 

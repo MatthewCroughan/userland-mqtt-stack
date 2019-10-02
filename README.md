@@ -14,6 +14,9 @@ After installing, the stack will start up with the container via crontab's `@reb
 
 In the home directory of your user there exists `~/killstack.sh` and `startstack.sh` should the stack ever fail you for some reason. Though this is un-necessary otherwise. 
 
-# Sidenote
+# Notes
 
 It seems the services are reliable enough to not need an init system or service manager for our testing purposes. However, I may be able to look more deeply into this and create a UserLAnd asset to do this same thing, more reliably and with a single click like an application. 
+
+Some devices seem to need probing in order to install anything, since their power saving features are too integrated into the system. I've added a throbber in the hopes that this alleviates that issue.
+

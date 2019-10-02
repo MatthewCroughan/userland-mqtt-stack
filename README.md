@@ -13,19 +13,19 @@ Now your container is set up, get the install script from this git directory som
 
 This could be done in a few ways:
 
-Via curl
+Via curl (first `sudo apt install curl -y`)
 ```
 bash <(curl -s https://raw.githubusercontent.com/MatthewCroughan/userland-mqtt-stack/master/install.sh)
 ```
 
-Via wget and running directly
+Via wget and running directly (first `sudo apt install wget -y`)
 ```
 wget https://raw.githubusercontent.com/MatthewCroughan/userland-mqtt-stack/master/install.sh
 chmod +x install.sh
 ./install.sh`
 ```
 
-Cloning the repository and running
+Cloning the repository and running (first `sudo apt install git -y`)
 ```
 git clone https://github.com/MatthewCroughan/userland-mqtt-stack.git
 cd userland-mqtt-stack

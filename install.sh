@@ -41,7 +41,7 @@ spinner()
 install_preliminary() {
   sudo apt-get update
   sudo apt-get install htop psmisc nano vim wget cron software-properties-common apt-transport-https gnupg -y
-  sudo echo "deb https://packages.grafana.com/oss/deb stable main" > /etc/apt/sources.list.d/grafana.list
+  sudo echo "deb [trusted=yes] https://packages.grafana.com/oss/deb stable main" > /etc/apt/sources.list.d/grafana.list
   wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
   sudo apt-get update
 }

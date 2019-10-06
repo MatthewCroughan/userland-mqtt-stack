@@ -52,10 +52,10 @@ install_stack() {
 }
 
 install_scripts() {
-  startstack="mosquitto &
-  node-red &
-  influxd &
-  grafana-server --homepath "/usr/share/grafana" &"
+  startstack="mosquitto >> ~/mosquitto.log &
+  node-red >> ~/node-red.log &
+  influxd >> ~/influxd.log &
+  grafana-server --homepath "/usr/share/grafana" >> ~/grafana-server.log &"
   echo "$startstack" > ~/startstack.sh
   chmod +x ~/startstack.sh
   killstack="killall -9 mosquitto node influxdb grafana-server"
